@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="shortcut icon" href="assets//SL-123119-26540-43.jpg" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Nunito+Sans:opsz,wght@6..12,300&display=swap" rel="stylesheet">
+    <title>Musify - Listen To Your Favourite Music</title>
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li class="logo"><a href="#"><img src="assets/SL-123119-26540-43.jpg" id="nav-logo" alt="Music logo"></a>Musify</li>
+            <li><a href="">Home</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <div class="song-list">
+            <h1>Listen To Your Favourite Songs</h1>
+            <div class="song-items-container">
+                <div class="song">
+                    <img src="assets/covers/1.png">
+                    <h4>Lost Sky - Dreams pt. II</h4>
+                    <span class="list-play"><span class="time">3:35</span><i id="0" class="fa-regular song-item-play fa-circle-play"></i></span>
+                </div>
+                <div class="song">
+                    <img src="assets/covers/2.png">
+                    <h4>Alone pt. II (feat Ava Max)</h4>
+                    <span class="list-play"><span class="time">2:57</span><i id="1" class="fa-regular song-item-play fa-circle-play"></i></span>
+                </div>
+                <div class="song">
+                    <img src="assets/covers/3.png">
+                    <h4>Daku</h4>
+                    <span class="list-play"><span class="time">2:14</span><i id="2" class="fa-regular song-item-play fa-circle-play"></i></span>
+                </div>
+                <div class="song">
+                    <img src="assets/covers/4.png">
+                    <h4>Faded - Alan Walker</h4>
+                    <span class="list-play"><span class="time">3:32</span><i id="3" class="fa-regular song-item-play fa-circle-play"></i></span>
+                </div>
+                <div class="song">
+                    <img src="assets/covers/5.png">
+                    <h4>Gangsta's Paradise</h4>
+                    <span class="list-play"><span class="time">4:16</span><i id="4" class="fa-regular song-item-play fa-circle-play"></i></span>
+                </div>
+                <div class="song">
+                    <img src="assets/covers/6.png">
+                    <h4>Jadugar - By Paradox</h4>
+                    <span class="list-play"><span class="time">3:08</span><i id="5" class="fa-regular song-item-play fa-circle-play"></i></span>
+                </div>
+                <div class="song">
+                    <img src="assets/covers/7.png">
+                    <h4>Lela Lela le - By Rauf Faik</h4>
+                    <span class="list-play"><span class="time">3:26</span><i id="6" class="fa-regular song-item-play fa-circle-play"></i></span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="bottom">
+        <input type="range" name="range" id="progress-bar" value="0">
+        <div class="icons">
+            <i class="fa-solid fa-backward-step fa-2x" id="backward"></i>
+            <i class="fa-regular fa-circle-play fa-2x" id="master-play"></i>
+            <i class="fa-solid fa-forward-step fa-2x" id="next"></i>
+        </div>
+        <div class="song-info-playing">
+            <img src="assets/Nt6v.gif" width="40px" id="gif">
+            <div id="current-song">Lost Sky - Dreams pt. II</div>
+            <div id="current-timer">0:00</div>
+        </div>
+
+        <div class="slider_container">
+            <i class="fa fa-volume-down"></i>
+            <input type="range" min="1" max="100" value="10" class="volume_slider" onchange="setVolume()">
+            <i class="fa fa-volume-up"></i>
+        </div>
+    </div>
+
+</body>
+<script src="./script.js"></script>
+<script src="https://kit.fontawesome.com/aa83ae55f0.js" crossorigin="anonymous"></script>
+
+</html>
