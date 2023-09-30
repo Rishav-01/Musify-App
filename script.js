@@ -178,3 +178,13 @@ setInterval(() => {
         document.getElementById('current-timer').innerText = "00:00";
     }
 }, 1000);
+
+function toggleMute() {
+    console.log("clicked");
+    if(audioElement.volume == 0){
+        setVolume();
+    }
+    else{
+        audioElement.volume=0;
+    }
+ }
