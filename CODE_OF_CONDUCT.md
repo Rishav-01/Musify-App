@@ -1,4 +1,4 @@
-# Code of Conduct - NSCC BPIT WEBSITE
+# Code of Conduct - MUSIFY
 
 ## Our Pledge
 
