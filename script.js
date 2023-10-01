@@ -180,7 +180,6 @@ setInterval(() => {
 }, 1000);
 
 function toggleMute() {
-    console.log("clicked");
     if(audioElement.volume == 0){
         setVolume();
     }
