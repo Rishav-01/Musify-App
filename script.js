@@ -6,6 +6,8 @@ let myProgressbar = document.getElementById('progress-bar');
 let gif = document.getElementById('gif');
 let nextButton = document.getElementById('next');
 let backButton = document.getElementById('backward');
+let muteButton=document.querySelector('.volume-toggle');
+
 // let timer = document.getElementById('current-timer').innerText;
 let volume_slider = document.querySelector(".volume_slider");
 let songs = [
@@ -145,6 +147,7 @@ backButton.addEventListener('click', () => {
 
 // set volume
 volume_slider.value = 10;
+
 audioElement.volume = volume_slider.value / 100;
 function setVolume() {
     audioElement.volume = volume_slider.value / 100;
@@ -160,6 +163,7 @@ audioElement.addEventListener('ended', () => {
     makeAllPlay();
     myProgressbar.value = 0;
 })
+
 
 // timer updates
 setInterval(() => {
@@ -178,3 +182,18 @@ setInterval(() => {
         document.getElementById('current-timer').innerText = "00:00";
     }
 }, 1000);
+
+muteButton.addEventListener('click',()=>{
+    if(muteButton.classList.contains('fa-volume-down')){
+        muteButton.classList.remove('fa-volume-down');
+        muteButton.classList.add('fa-volume-up');
+        audioElement.volume=0;
+        
+    }
+    else{
+        muteButton.classList.add('fa-volume-down');
+        muteButton.classList.remove('fa-volume-up');
+        setVolume()
+    }
+
+})
