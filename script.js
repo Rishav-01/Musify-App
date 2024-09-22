@@ -154,6 +154,8 @@ Array.from(document.getElementsByClassName("song-item-play")).forEach(
 
         // Update the current song index and play the new song
         songIndex = newSongIdx;
+        let newSong = songs[songIndex].songName;
+        document.getElementById("current-song").innerText = newSong;
         audioElement.src = `assets/songs/${songIndex + 1}.mp3`;
         audioElement.currentTime = 0;
         myProgressbar.value = 0;
