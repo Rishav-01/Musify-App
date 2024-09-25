@@ -245,7 +245,4 @@ setInterval(() => {
     tt = "";
   }
   document.getElementById("current-timer").innerText = tt + Amin + ":" + Asec;
-  if (audioElement.paused) {
-    document.getElementById("current-timer").innerText = "00:00";
-  }
 }, 1000);
