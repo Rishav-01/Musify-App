@@ -117,6 +117,7 @@ const makeAllPlay = () => {
     }
   );
 };
+
 Array.from(document.getElementsByClassName("song-item-play")).forEach(
   (element) => {
     element.addEventListener("click", (e) => {
@@ -221,15 +222,25 @@ function setVolume() {
   audioElement.volume = volume_slider.value / 100;
 }
 
-// if the song is completed, then stop the music
+// if the song is completed, then stop the music and play the next music in the list
 audioElement.addEventListener("ended", () => {
-  masterPlay.classList.add("fa-circle-play");
-  masterPlay.classList.remove("fa-circle-pause");
-  gif.style.opacity = 0;
-  audioElement.pause();
   removeBack();
+  if (songIndex == songs.length - 1) {
+    songIndex = 0;
+  } else songIndex++;
+  audioElement.pause();
   makeAllPlay();
   myProgressbar.value = 0;
+  addBackColor();
+  playNext();
+  Array.from(document.getElementsByClassName("song-item-play")).forEach(
+    (element) => {
+      if (element.id == songIndex) {
+        element.classList.remove("fa-circle-play");
+        element.classList.add("fa-circle-pause");
+      }
+    }
+  );
 });
 
 // timer updates
