@@ -21,29 +21,29 @@ let songs = [
     songCover: "assets/covers/2.png",
   },
   {
-    songName: "Daku",
+    songName: "Faded - Alan Walker",
     songPath: "assets/songs/3.mp3",
     songCover: "assets/covers/3.png",
   },
   {
-    songName: "Faded - Alan Walker",
+    songName: `Gangsta's Paradise`,
     songPath: "assets/songs/4.mp3",
     songCover: "assets/covers/4.png",
   },
   {
-    songName: `Gangsta's Paradise`,
+    songName: "Lela Lela le - By Rauf Faik",
     songPath: "assets/songs/5.mp3",
     songCover: "assets/covers/5.png",
   },
   {
-    songName: "Jadugar - By Paradox",
-    songPath: "assets/songs/6.mp3",
-    songCover: "assets/covers/6.png",
+    songName: "Dance Monkey",
+    songPath: "assets/songs/8.mp3",
+    songCover: "assets/covers/8.jpg",
   },
   {
-    songName: "Lela Lela le - By Rauf Faik",
+    songName: "Time Back",
     songPath: "assets/songs/7.mp3",
-    songCover: "assets/covers/7.png",
+    songCover: "assets/covers/7.jpeg",
   },
 ];
 
